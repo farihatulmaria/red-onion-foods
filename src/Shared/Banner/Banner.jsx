@@ -10,7 +10,7 @@ const Banner = () => {
                         <div className='search-form text-center'>
                             <h1 className='my-5'>Best Food Waiting For Your Belly</h1>
                             <Form className='d-flex mx-5'>
-                                <Form.Control type='text' placeholder='Search Food Items' />
+                                <Form.Control className='search-input' type='text' placeholder='Search Food Items' />
                                 <Button type='submit'>Search</Button>
                             </Form>
                         </div>

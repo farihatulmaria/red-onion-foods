@@ -1,0 +1,21 @@
+.login,
+.sign-up {
+  background: url("../../img/login-banner.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form-check-input:checked {
+  background: #e51a4b;
+  border: 0;
+}
+.login input,
+.sign-up input {
+  background: #fafafa;
+  border: none;
+}
+
+.login label,
+.sign-up label {
+  color: #989898 !important;
+}

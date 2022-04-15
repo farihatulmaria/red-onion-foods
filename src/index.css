@@ -13,14 +13,28 @@ body {
 h1 {
   font-size: 70px;
 }
-
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #e51a4b;
+}
 button {
   background: #e51a4b !important;
   border: 0 !important;
   padding: 10px 30px !important;
   border-radius: 50px !important;
 }
-
+input[type="submit"] {
+  background: #e51a4b;
+  color: #fff;
+  padding: 1rem 0;
+  border: none;
+}
+input[type="submit"]:focus {
+  background: #e51a4b;
+  color: #fff;
+}
 /*
 ========================
        Main CSS
@@ -31,4 +45,7 @@ button {
 }
 .navbar-toggler:focus {
   box-shadow: none;
+}
+.text-pink {
+  color: #e51a4b;
 }
