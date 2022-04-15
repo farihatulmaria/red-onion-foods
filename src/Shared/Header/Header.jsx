@@ -11,7 +11,7 @@ const Header = () => {
             <Navbar fixed='top' expand="lg" className='py-3'>
                 <Container>
                     <Navbar.Brand href="/">
-                        <img src={logo2} alt="red onion foods" width={'150px'} />
+                        <img src={logo2} alt="red onion foods" width='150px' />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
