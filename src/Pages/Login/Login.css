@@ -19,3 +19,6 @@
 .sign-up label {
   color: #989898 !important;
 }
+.form-control:disabled {
+  background: #f77997;
+}

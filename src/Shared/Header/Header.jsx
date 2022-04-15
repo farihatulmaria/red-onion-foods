@@ -2,7 +2,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase';
 import logo2 from '../../img/logos/logo2.png';
@@ -20,26 +20,26 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto align-items-center text-right">
-                        <Nav.Link href="/cart">
+                        <NavLink href="/cart">
                             <FontAwesomeIcon icon={faCartShopping} />
-                        </Nav.Link>
+                        </NavLink>
                         {
                             user 
                             ? 
                             <>
-                            <Nav.Link href='profile'>
+                            <NavLink href='profile'>
                                 <img src={user?.photoURL? user?.photoURL : userImg} alt="" width='50px'/>
-                            </Nav.Link>
-                            <Nav.Link>
+                            </NavLink>
+                            <NavLink>
                                 <Button onClick={()=>signOut(auth)}>Sign Out</Button>
-                            </Nav.Link>
+                            </NavLink>
                             </>
                             :
                             <>
-                                <Nav.Link href="/login">Login</Nav.Link>
-                                <Nav.Link href='/sign-up'>
+                                <NavLink href="/login">Login</NavLink>
+                                <NavLink href='/sign-up'>
                                     <Button>Sign Up</Button>
-                                </Nav.Link>
+                                </NavLink>
                             </>
                         }
                     </Nav>

@@ -10,12 +10,14 @@ function App() {
   return (
     <>
       <Header/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/sign-up' element={<SignUp/>}/>
-      </Routes>
+      <main style={{marginTop:'85px'}}>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/sign-up' element={<SignUp/>}/>
+        </Routes>
+      </main>
       <Footer/>
     </>
   );

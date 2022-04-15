@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Container, FloatingLabel, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase';
 import logo from '../../img/logos/logo2.png';
+import Loading from '../../Shared/Loading/Loading';
 import './Login.css';
 const Login = () => { 
+    const [remember, setRemember] = useState(false)
     const [
         signInWithEmailAndPassword,
         user,
         loading,
-        error,
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
+    
     if(user){
         navigate('/');
+    }
+    if(loading){
+        return <Loading/>
     }
     const handleSubmission = (e) => {
         
@@ -55,9 +60,9 @@ const Login = () => {
                                     <Form.Control name='password' type="password" placeholder="1234567890" />
                                 </FloatingLabel>
                                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                    <Form.Check type="checkbox" label="Remember Me" />
+                                    <Form.Check onClick={()=>setRemember(!remember)} type="checkbox" label="Remember Me" />
                                 </Form.Group>
-                                <Form.Control type="submit" value='Login'/>
+                                <Form.Control disabled={!remember} type="submit" value='Login'/>
                                 <p className='text-center my-3'>
                                     <Link className='text-pink' to={'/sign-up'}>Don't Have An Account</Link>
                                 </p>
@@ -66,7 +71,7 @@ const Login = () => {
                     </Card>
                 </div>
             </Container>
-        </div>
+        </div> 
     );
 };
 
