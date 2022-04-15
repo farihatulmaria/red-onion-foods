@@ -1,17 +1,28 @@
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
- 
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import logo2 from '../../img/logos/logo2.png';
+import './Header.css';
 const Header = () => {
+
     return (
         <header>
-            <Navbar bg="light" expand="lg">
+            <Navbar fixed='top' expand="lg" className='my-3'>
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="/">
+                        <img src={logo2} alt="red onion foods" width={'150px'} />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
+                    <Nav className="ms-auto align-items-center">
+                        <Nav.Link href="/cart">
+                            <FontAwesomeIcon icon={faCartShopping} />
+                        </Nav.Link>
+                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href='/sign-up'>
+                            <Button>Sign Up</Button>
+                        </Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
