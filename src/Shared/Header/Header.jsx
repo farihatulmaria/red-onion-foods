@@ -8,14 +8,14 @@ const Header = () => {
 
     return (
         <header>
-            <Navbar fixed='top' expand="lg" className='my-3'>
+            <Navbar fixed='top' expand="lg" className='py-3'>
                 <Container>
                     <Navbar.Brand href="/">
                         <img src={logo2} alt="red onion foods" width={'150px'} />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto align-items-center">
+                    <Nav className="ms-auto align-items-center text-right">
                         <Nav.Link href="/cart">
                             <FontAwesomeIcon icon={faCartShopping} />
                         </Nav.Link>

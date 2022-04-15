@@ -1,0 +1,10 @@
+.banner {
+  background: url("../../img/banner.png");
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form-control {
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+}
