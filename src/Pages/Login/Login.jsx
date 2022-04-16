@@ -15,11 +15,11 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
     
-    if(user){
-        navigate('/');
-    }
     if(loading){
         return <Loading/>
+    }
+    if(user){
+        navigate('/');
     }
     const handleSubmission = (e) => {
         
